@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AstroLearn MVP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="font-family: Arial; text-align:center; background-color:#0b0c10; color:white;">
+
+    <h1>AstroLearn</h1>
+    <p>Minimum Viable Product for studying astronomy and asteroid data</p>
+
+    <hr>
+
+    <h2>Search Asteroid</h2>
+
+    <input type="text" id="asteroidName" placeholder="Enter asteroid name">
+    <button onclick="showData()">Search</button>
+
+    <h3>Asteroid Information</h3>
+
+    <p><strong>Composition:</strong> <span id="composition">-</span></p>
+    <p><strong>Radius:</strong> <span id="radius">-</span></p>
+    <p><strong>Location:</strong> <span id="location">-</span></p>
+
+    <hr>
+
+    <h2>About Space Debris</h2>
+    <p>Space debris consists of defunct satellites, rocket fragments and collision particles orbiting Earth.</p>
+
+    <hr>
+
+    <footer>
+        <p>AstroLearn MVP Project</p>
+    </footer>
+
+<script>
+function showData() {
+    const name = document.getElementById("asteroidName").value.toLowerCase();
+
+    if(name === "apophis") {
+        document.getElementById("composition").innerText = "Rocky";
+        document.getElementById("radius").innerText = "185 meters";
+        document.getElementById("location").innerText = "Near-Earth Orbit";
+    }
+    else if(name === "ceres") {
+        document.getElementById("composition").innerText = "Rock and Ice";
+        document.getElementById("radius").innerText = "473 km";
+        document.getElementById("location").innerText = "Asteroid Belt";
+    }
+    else {
+        document.getElementById("composition").innerText = "Unknown asteroid";
+        document.getElementById("radius").innerText = "-";
+        document.getElementById("location").innerText = "-";
+    }
+}
+</script>
+
+</body>
+</html>
